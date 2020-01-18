@@ -30,9 +30,7 @@ class App extends React.Component {
                     item.score += delta;
                 }
             })
-            return {players: players};
-            /*const players = prevState.players.filter(item => item.id == id);
-            return {score: players.score + delta}*/
+            return {players};
         });
     }
 
