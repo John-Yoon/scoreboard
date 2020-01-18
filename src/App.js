@@ -21,13 +21,30 @@ class App extends React.Component {
         })
     }
 
+    handleChangeScore = (id, delta) => {
+        /*console.log('handleChangeScore', id, delta);*/
+        this.setState(prevState => {
+            const players = [...prevState.players]; // deep copy
+            players.forEach(item => {
+                if (item.id === id) {
+                    item.score += delta;
+                }
+            })
+            return {players: players};
+            /*const players = prevState.players.filter(item => item.id == id);
+            return {score: players.score + delta}*/
+        });
+    }
+
     render() {
         return (
             <div className="scoreboard">
                 <Header title="My Scoreboard" totalPlayers={11}/>
                 {
                     this.state.players.map((item) => (
-                        <Player id={item.id} name={item.name} score={item.score} key={item.id} removePlayer={this.handleRemovePlayer}/>
+                        <Player id={item.id} name={item.name} score={item.score} key={item.id}
+                                changeScore={this.handleChangeScore}
+                                removePlayer={this.handleRemovePlayer}/>
                     ))
                 }
             </div>

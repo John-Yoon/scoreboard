@@ -148,6 +148,8 @@ git push origin master
 
 https://github.com/John-Yoon/scoreboard.git
 
+Hard Reset을 하면 이전 소스로 전체가 변경된다.
+
 
 
 
