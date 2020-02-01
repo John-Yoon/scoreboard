@@ -13,5 +13,6 @@ npm i -S lodash
  - promiss
  - async/await << 현재는 이 패턴을? es7?
 
-5.
+5. redux tutorial 프로젝트로 이동
+
 
