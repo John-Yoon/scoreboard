@@ -8,3 +8,10 @@ npm i -S lodash
  - Search, react validation.... React는 third party api 사용이 필요함.
  - Angular는 validation UI&UX를 포함하고 있다고??
 
+4. 비동기 처리 추세....?
+ - callback function
+ - promiss
+ - async/await << 현재는 이 패턴을? es7?
+
+5.
+
