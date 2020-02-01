@@ -3,16 +3,17 @@ import './App.css';
 import {Header} from './components/Header';
 import {Player} from './components/Player';
 import {AddPlayerForm} from "./components/AddPlayerForm";
+import {connect} from "react-redux";
 
 class App extends React.Component {
-    state = {
-        players: [
-            {name: 'LDK', score:5, id: 1},
-            {name: 'OKE', score:6, id: 2},
-            {name: 'DFK', score:7, id: 3},
-            {name: 'WER', score:8, id: 4}
-        ]
-    }
+    // state = {
+    //     players: [
+    //         {name: 'LDK', score:5, id: 1},
+    //         {name: 'OKE', score:6, id: 2},
+    //         {name: 'DFK', score:7, id: 3},
+    //         {name: 'WER', score:8, id: 4}
+    //     ]
+    // }
 
     handleRemovePlayer = (e, id) => {
         console.log('handleRemove :' + id);
@@ -52,9 +53,9 @@ class App extends React.Component {
         return (
             <div className="scoreboard">
                 {/*<Header title="My Scoreboard" totalPlayers={11}/>*/}
-                <Header title="My Scoreboard" players={this.state.players} />
+                <Header title="My Scoreboard" players={this.props.players} />
                 {
-                    this.state.players.map((item) => (
+                    this.props.players.map((item) => (
                         <Player id={item.id} name={item.name} score={item.score} key={item.id}
                                 changeScore={this.handleChangeScore}
                                 removePlayer={this.handleRemovePlayer}/>
@@ -66,4 +67,13 @@ class App extends React.Component {
     }
 }
 
-export default App;
+// export default App;
+
+const mapStateToProps = (state) => ({
+  // 왼쪽 props, 오른쪽 store.state
+  players: state.playerReducer.players
+});
+
+export default connect(mapStateToProps)(App);
+
+
