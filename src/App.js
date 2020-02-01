@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {Header} from './components/Header';
 import {Player} from './components/Player';
+import {AddPlayerForm} from "./components/AddPlayerForm";
 
 class App extends React.Component {
     state = {
@@ -37,7 +38,8 @@ class App extends React.Component {
     render() {
         return (
             <div className="scoreboard">
-                <Header title="My Scoreboard" totalPlayers={11}/>
+                {/*<Header title="My Scoreboard" totalPlayers={11}/>*/}
+                <Header title="My Scoreboard" players={this.state.players} />
                 {
                     this.state.players.map((item) => (
                         <Player id={item.id} name={item.name} score={item.score} key={item.id}
@@ -45,6 +47,7 @@ class App extends React.Component {
                                 removePlayer={this.handleRemovePlayer}/>
                     ))
                 }
+                <AddPlayerForm />
             </div>
         )
     }
