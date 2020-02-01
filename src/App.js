@@ -35,6 +35,10 @@ class App extends React.Component {
         });
     }
 
+    handleAddPlayer = (name) => {
+        console.log('handleAddPlayer: ', name);
+    }
+
     render() {
         return (
             <div className="scoreboard">
@@ -47,7 +51,7 @@ class App extends React.Component {
                                 removePlayer={this.handleRemovePlayer}/>
                     ))
                 }
-                <AddPlayerForm />
+                <AddPlayerForm addPlayer={this.handleAddPlayer} />
             </div>
         )
     }
