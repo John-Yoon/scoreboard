@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {Header} from './components/Header';
 import {Player} from './components/Player';
-import {AddPlayerForm} from "./components/AddPlayerForm";
+import AddPlayerForm from "./components/AddPlayerForm";
 import {connect, useSelector} from "react-redux";
 
 // class ==> function
@@ -39,17 +39,17 @@ function App() {
         });
     }
 
-    const handleAddPlayer = (name) => {
-        //console.log('handleAddPlayer: ', name);
-        // name을 players 배열에 추가.
-        this.setState(prevState => {
-            const players = [...prevState.players]; // deep copy
-            players.push({id: players[players.length-1].id+1, name: name, score: name.length});
-            return {players: players};
-            /*prevState.players.push({id: 5, name: name, score: 0});
-            return {players: prevState.players};*/
-        });
-    }
+    // const handleAddPlayer = (name) => {
+    //     //console.log('handleAddPlayer: ', name);
+    //     // name을 players 배열에 추가.
+    //     this.setState(prevState => {
+    //         const players = [...prevState.players]; // deep copy
+    //         players.push({id: players[players.length-1].id+1, name: name, score: name.length});
+    //         return {players: players};
+    //         /*prevState.players.push({id: 5, name: name, score: 0});
+    //         return {players: prevState.players};*/
+    //     });
+    // }
 
     console.log('App render');
 
@@ -64,7 +64,7 @@ function App() {
                             removePlayer={handleRemovePlayer}/>
                 ))
             }
-            <AddPlayerForm addPlayer={handleAddPlayer} />
+            <AddPlayerForm />
         </div>
     )
 }

@@ -1,6 +1,9 @@
 import React from 'react';
+import {addPlayer} from "../redux/actions";
+import {connect} from "react-redux";
 
-export class AddPlayerForm extends React.Component {
+// Name export를 default export로 수정하면서, 참조하고 있는 곳의 괄호를 제거.
+class AddPlayerForm extends React.Component {
     state = {
         value:''
     }
@@ -42,3 +45,13 @@ export class AddPlayerForm extends React.Component {
         );
     }
 }
+
+//dispatch: (Action을 dispatch하는) function을 props로 매핑.
+const mapActionToProps = (dispatch) => ({
+    // L - props, R - function
+    addPlayer: (name) => dispatch(addPlayer(name))
+})
+
+// export default App;
+// HoC, 커링 function
+export default connect(null, mapActionToProps)(AddPlayerForm);

@@ -8,5 +8,15 @@ const playerInitialState = {
 }
 
 export const playerReducer = (state = playerInitialState, action) => {
-    return state;
+    switch (action.type) {
+        case 'ADD_PLAYER':
+            const players = [...state.players]; // deep copy
+            players.push({id: players[players.length-1].id+1, name: action.name, score: action.name.length});
+            return {
+                ...state,
+                players
+            };
+        default:
+            return state;
+    }
 }
