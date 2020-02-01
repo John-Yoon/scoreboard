@@ -1,3 +1,10 @@
 1. lodash 설치
 npm i -S lodash
 
+2. html5 validation 종류
+ - required, length .... 9가지???
+
+3. npmjs.com
+ - Search, react validation.... React는 third party api 사용이 필요함.
+ - Angular는 validation UI&UX를 포함하고 있다고??
+

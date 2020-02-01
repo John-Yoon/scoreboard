@@ -36,10 +36,19 @@ class App extends React.Component {
     }
 
     handleAddPlayer = (name) => {
-        console.log('handleAddPlayer: ', name);
+        //console.log('handleAddPlayer: ', name);
+        // name을 players 배열에 추가.
+        this.setState(prevState => {
+            const players = [...prevState.players]; // deep copy
+            players.push({id: players[players.length-1].id+1, name: name, score: name.length});
+            return {players: players};
+            /*prevState.players.push({id: 5, name: name, score: 0});
+            return {players: prevState.players};*/
+        });
     }
 
     render() {
+        console.log('App render');
         return (
             <div className="scoreboard">
                 {/*<Header title="My Scoreboard" totalPlayers={11}/>*/}
