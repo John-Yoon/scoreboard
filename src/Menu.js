@@ -17,21 +17,23 @@ export const Menu = (props) => {
     return (
         <div>
             <Navbar color="dark" dark expand="md">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
-                        <NavItem className="nav-item">
-                            <NavLink to="/heroes" className="nav-link">Heroes</NavLink>
-                        </NavItem>
-                        <NavItem className="nav-item">
-                            <NavLink to="/scoreboard" className="nav-link">Scoreboard</NavLink>
-                        </NavItem>
-                        <NavItem className="nav-item">
-                            <NavLink to="/product" className="nav-link">Product</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
+                <div className="container">
+                    <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <NavbarToggler onClick={toggle}/>
+                    <Collapse isOpen={isOpen} navbar>
+                        <Nav className="ml-auto" navbar>
+                            <NavItem className="nav-item">
+                                <NavLink to="/heroes" className="nav-link">Heroes</NavLink>
+                            </NavItem>
+                            <NavItem className="nav-item">
+                                <NavLink to="/scoreboard" className="nav-link">Scoreboard</NavLink>
+                            </NavItem>
+                            <NavItem className="nav-item">
+                                <NavLink to="/product" className="nav-link">Product</NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
+                </div>
             </Navbar>
         </div>
     );

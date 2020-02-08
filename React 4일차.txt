@@ -18,4 +18,8 @@ lodash _sumby, _maxby, _groupby
 
 npm i -S react-router_dom
 
+npm i -S axios <-- http header body 를 콘트롤 할 수 있다.
+
+flex layout ?? 반응형 웹??
+
 

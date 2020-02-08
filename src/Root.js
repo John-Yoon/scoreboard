@@ -10,10 +10,12 @@ export const Root = (props) => {
     return (
         <BrowserRouter>
             <Menu></Menu>
-            <Route path="/" exact component={Home}></Route>
-            <Route path="/heroes" component={Heroes}></Route>
-            <Route path="/scoreboard" component={Scoreboard}></Route>
-            <Route path="/product" component={FilterableProductTable}></Route>
+            <div className="container" style={{backgroundColor: '#CCCCCC'}}>
+                <Route path="/" exact component={Home}></Route>
+                <Route path="/heroes" component={Heroes}></Route>
+                <Route path="/scoreboard" component={Scoreboard}></Route>
+                <Route path="/product" component={FilterableProductTable}></Route>
+            </div>
         </BrowserRouter>
     );
 }
