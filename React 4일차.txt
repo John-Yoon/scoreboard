@@ -22,4 +22,10 @@ npm i -S axios <-- http header body 를 콘트롤 할 수 있다.
 
 flex layout ?? 반응형 웹??
 
+Media query 학습하기.
+
+로컬의 이미지를 가져오는 방법..... 확인필요함...
+<img src={hero.photo ? hero.photo : process.env.PUBLIC_URL + '/images/baseline-face-24px.svg'} style={{width: '100%'}} alt={hero.name}></img>
+
+
 
