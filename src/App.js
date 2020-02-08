@@ -4,6 +4,7 @@ import {Header} from './components/Header';
 import Player from './components/Player';
 import AddPlayerForm from "./components/AddPlayerForm";
 import {useSelector} from "react-redux";
+import {CustomPlayer} from "./components/CustomPlayer";
 
 // class ==> function
 function App() {
@@ -59,7 +60,7 @@ function App() {
             <Header title="My Scoreboard" players={players} />
             {
                 players.map((item) => (
-                    <Player id={item.id} name={item.name} score={item.score} key={item.id} />
+                    <CustomPlayer id={item.id} name={item.name} score={item.score} key={item.id} />
                 ))
             }
             <AddPlayerForm />
