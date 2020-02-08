@@ -16,4 +16,6 @@ ORM
 
 lodash _sumby, _maxby, _groupby
 
+npm i -S react-router_dom
+
 

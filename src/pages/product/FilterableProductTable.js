@@ -22,16 +22,10 @@ export const FilterableProductTable = (props) => {
 
     return (
         <div>
-            {/*<SearchBar/>*/}
-            {/*<ProductTable>*/}
-            {/*    <ProductCategoryRow>*/}
-            {/*        <ProductRow/>*/}
-            {/*    </ProductCategoryRow>*/}
-            {/*</ProductTable>*/}
             <SearchBar keyword={keyword} setKeyword={setKeyword}
                        stockChecked={stockChecked} setStockChecked={setStockChecked}/>
             <ProductTable
-                products={products.filter(item => item.name.indexOf(keyword) >= 0).filter(item =>stockChecked ? item.stocked : true)}/>
+                products={products.filter(item => item.name.indexOf(keyword) >= 0).filter(item => stockChecked ? item.stocked : true)}/>
         </div>
     );
 }
