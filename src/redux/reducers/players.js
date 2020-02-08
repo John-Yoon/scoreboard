@@ -31,6 +31,13 @@ export const playerReducer = (state = playerInitialState, action) => {
                 ...state,
                 players: players
             }
+        case 'REMOVE_PLAYER':
+            // players = [...state.players]; // deep copy
+            players = state.players.filter(item => item.id !== action.id);
+            return {
+                ...state,
+                players
+            };
         default:
             return state;
     }

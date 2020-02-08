@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Header} from './components/Header';
-import {Player} from './components/Player';
+import Player from './components/Player';
 import AddPlayerForm from "./components/AddPlayerForm";
 import {useSelector} from "react-redux";
 
@@ -18,13 +18,13 @@ function App() {
 
     const players = useSelector(state => state.playerReducer.players);
 
-    const handleRemovePlayer = (e, id) => {
-        console.log('handleRemove :' + id);
-        this.setState(prevState => {
-            const players = prevState.players.filter(item => item.id !== id);
-            return {players: players};
-        })
-    }
+    // const handleRemovePlayer = (e, id) => {
+    //     console.log('handleRemove :' + id);
+    //     this.setState(prevState => {
+    //         const players = prevState.players.filter(item => item.id !== id);
+    //         return {players: players};
+    //     })
+    // }
 
     // const handleChangeScore = (id, delta) => {
     //     /*console.log('handleChangeScore', id, delta);*/
@@ -59,8 +59,7 @@ function App() {
             <Header title="My Scoreboard" players={players} />
             {
                 players.map((item) => (
-                    <Player id={item.id} name={item.name} score={item.score} key={item.id}
-                            removePlayer={handleRemovePlayer}/>
+                    <Player id={item.id} name={item.name} score={item.score} key={item.id} />
                 ))
             }
             <AddPlayerForm />
