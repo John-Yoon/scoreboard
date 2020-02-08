@@ -1,14 +1,16 @@
 import React from "react";
 import Counter from './Counter';
 import {removePlayer} from "../redux/actions";
-import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
-import {connect} from "react-redux";
+import {useDispatch} from "react-redux";
 
 const Player = (props) => {
+
+    const dispatch = useDispatch();
+
     return (
         <div className="player">
             <span className="player-name">
-                <button className="remove-player" onClick={() => props.removePlayer(props.id)}>x</button>
+                <button className="remove-player" onClick={() => dispatch(removePlayer(props.id))}>x</button>
                 {props.name}
             </span>
             <Counter id={props.id} score={props.score} />
@@ -16,8 +18,4 @@ const Player = (props) => {
     )
 }
 
-const mapActionToProps = (dispatch) => ({
-    removePlayer: (id) => dispatch(removePlayer(id))
-})
-
-export default connect(null, mapActionToProps)(Player);
+export default Player;
