@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SearchBar} from "./SearchBar";
 import {ProductTable} from "./ProductTable";
 import {ProductCategoryRow} from "./ProductCategoryRow";
@@ -17,6 +17,8 @@ const products = [
 ];
 
 export const FilterableProductTable = (props) => {
+    const [keyword, setKeyword] = useState('');
+
     return (
         <div>
             {/*<SearchBar/>*/}
@@ -25,8 +27,8 @@ export const FilterableProductTable = (props) => {
             {/*        <ProductRow/>*/}
             {/*    </ProductCategoryRow>*/}
             {/*</ProductTable>*/}
-            <SearchBar/>
-            <ProductTable products={products}/>
+            <SearchBar keyword={keyword} setKeyword={setKeyword}/>
+            <ProductTable products={products.filter(item => item.name.indexOf(keyword) >= 0)}/>
         </div>
     );
 }
