@@ -1,3 +1,19 @@
 UML Association Aggregation ... Composition ?
 
 npm i -S classnames
+
+카카오톡 계정: eastflag
+
+i18n 국제화 (다국어) 관련 lib
+
+RTL은??
+
+ORM
+ : JPA => hibernate
+ : mybatis
+
+기획툴??? 재플린?? Zeplin (구글계정 가입.. jhyoon186@gmail.com)
+
+lodash _sumby, _maxby, _groupby
+
+
