@@ -17,7 +17,8 @@ const products = [
 ];
 
 export const FilterableProductTable = (props) => {
-    const [keyword, setKeyword] = useState('');
+    const [keyword, setKeyword] = useState(''); // input box's status
+    const [stockChecked, setStockChecked] = useState(false); // check box status
 
     return (
         <div>
@@ -27,8 +28,10 @@ export const FilterableProductTable = (props) => {
             {/*        <ProductRow/>*/}
             {/*    </ProductCategoryRow>*/}
             {/*</ProductTable>*/}
-            <SearchBar keyword={keyword} setKeyword={setKeyword}/>
-            <ProductTable products={products.filter(item => item.name.indexOf(keyword) >= 0)}/>
+            <SearchBar keyword={keyword} setKeyword={setKeyword}
+                       stockChecked={stockChecked} setStockChecked={setStockChecked}/>
+            <ProductTable
+                products={products.filter(item => item.name.indexOf(keyword) >= 0).filter(item =>stockChecked ? item.stocked : true)}/>
         </div>
     );
 }
