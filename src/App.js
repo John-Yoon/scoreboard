@@ -5,6 +5,7 @@ import Player from './components/Player';
 import AddPlayerForm from "./components/AddPlayerForm";
 import {useSelector} from "react-redux";
 import {CustomPlayer} from "./components/CustomPlayer";
+import _ from 'lodash';
 
 // class ==> function
 function App() {
@@ -54,13 +55,17 @@ function App() {
 
     console.log('App render');
 
+    const isHighScore = () => {
+        return _.maxBy(players, 'score').score;
+    }
+
     return (
         <div className="scoreboard">
             {/*<Header title="My Scoreboard" totalPlayers={11}/>*/}
             <Header title="My Scoreboard" players={players} />
             {
                 players.map((item) => (
-                    <CustomPlayer id={item.id} name={item.name} score={item.score} key={item.id} />
+                    <CustomPlayer id={item.id} name={item.name} score={item.score} key={item.id} isHighScore={isHighScore() === item.score} />
                 ))
             }
             <AddPlayerForm />
