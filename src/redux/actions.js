@@ -3,3 +3,11 @@ export const addPlayer = (name) => ({
     type: 'ADD_PLAYER',
     name
 });
+
+export const changeScore = (id, delta) => {
+    return {
+        type: 'CHANGE_SCORE',
+        id: id,
+        delta: delta
+    }
+};

@@ -3,7 +3,7 @@ import './App.css';
 import {Header} from './components/Header';
 import {Player} from './components/Player';
 import AddPlayerForm from "./components/AddPlayerForm";
-import {connect, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 // class ==> function
 function App() {
@@ -26,18 +26,18 @@ function App() {
         })
     }
 
-    const handleChangeScore = (id, delta) => {
-        /*console.log('handleChangeScore', id, delta);*/
-        this.setState(prevState => {
-            const players = [...prevState.players]; // deep copy
-            players.forEach(item => {
-                if (item.id === id) {
-                    item.score += delta;
-                }
-            })
-            return {players};
-        });
-    }
+    // const handleChangeScore = (id, delta) => {
+    //     /*console.log('handleChangeScore', id, delta);*/
+    //     this.setState(prevState => {
+    //         const players = [...prevState.players]; // deep copy
+    //         players.forEach(item => {
+    //             if (item.id === id) {
+    //                 item.score += delta;
+    //             }
+    //         })
+    //         return {players};
+    //     });
+    // }
 
     // const handleAddPlayer = (name) => {
     //     //console.log('handleAddPlayer: ', name);
@@ -60,7 +60,6 @@ function App() {
             {
                 players.map((item) => (
                     <Player id={item.id} name={item.name} score={item.score} key={item.id}
-                            changeScore={handleChangeScore}
                             removePlayer={handleRemovePlayer}/>
                 ))
             }
