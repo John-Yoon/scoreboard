@@ -1,0 +1,116 @@
+# 수업진행
+https://eastflag.co.kr/
+
+# 데모 사이트
+https://scoreboard.eastflag.co.kr/
+
+이동기
+
+Running React?
+
+VScode >> Web storm?
+
+http://edu.eastflag.co.kr:8750
+
+angular john parker?
+
+react toutorial 엉망이다.
+
+redux??
+
+hooks??
+
+Components and Props and State ????
+
+아이오닉 프레임워크 ??
+
+fullstack
+
+Vue는 Angular React 를 베낀거다???
+
+Type Script ?
+
+변수명: TYPE <-- 이 구조
+
+자바스크립트의 var name; 과 같은 구조와 반대.
+
+린드 규칙??
+
+React는 UI Library vs Angular는 Framework...
+
+ES5 >> ES6(2015) >> ES7(2016) >> >> ES9
+>>>>>> TS(Type Script)
+
+Can I use .COM?
+
+https://caniuse.com
+
+JSX
+https://babeljs.io <-- babel lib가 react code 구조로 변경한다.
+
+React는 {}안의 script 표현식을 넣어서 사용할 수 있다.
+
+emmet ???
+
+pre tier 포맷을 통일화 하기위해.... 
+
+Video 태크의 Source 속성은 React에서 지원안됨.
+
+class 속성은  className으로, for 속성은 htmlFor으로 사용해야 함.
+
+
+
+
+1. 화면을 컴퍼넌트 단위로 쪼갠다.
+2. 각각 컴퍼넌트 별로 퍼블리싱을 따로 한다.?
+3. 
+
+# Scoreboard 실습 ??? #
+App <- root
+Header
+Players
+ - Count
+
+
+React dev tools (Chrome)
+React 개발 시 컴퍼넌트별로 나뉜 상태부터 확인...
+
+TodoApp
+TodoHeader
+TodoForm
+TodoList
+Todo
+
+
+bootstrap4 ?
+One source Multi platform..
+css3 flex box??
+getbootstrap (site) >> documentation >> tilities >> Flex 공부 ??
+
+~ 01:20 --------------------------------- 02:30 ~
+
+props 데이터를 전달..
+상위 컴포넌트로는 전달이 안된다고?
+
+동적인 데이터 변경 등등....
+
+자식 컴 부모 컴 데이터 송/수신...
+
+        /*{
+            [
+                리액트엘리먼트,리액트엘리먼트,리액트엘리먼트,리액트엘리먼트
+            ]
+        }*/
+        
+        //{리액트엘리먼트},{리액트엘리먼트},{리액트엘리먼트},{리액트엘리먼트}
+
+React? Javascript? 에서의 map 새로운 배열을 만들어서 리턴한다.
+
+시간에 따라 변할 수 있는 데이터의 표현을 위해서 State를 사용한다.
+Class Componant만 사용해야 한다.
+Class라는 키워드를 알아야한다.
+ES6 class 는???
+
+생성자를 이해..
+state 규칙 3ea
+event handler 규칙 1ea
